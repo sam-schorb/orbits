@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="rnbo-version" content="1.0.0-alpha.5">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="iimaginary icon" href="img/iimaginaryLogoDarkGray.ico">
+    <title>orbits</title>
+    <script src="js/NexusUI.js"></script>
+</head>
+
+<body>
+    <div id="loading-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #e6e6e6; z-index: 1000; text-align: center; padding-top: 20%; font-size: 2em;">
+    </div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <svg id="background" width="100%" height="100%"></svg>
+    <div id="main-container">
+    <div id="rnbo-root">
+		<div>
+			<h1 id="patcher-title">Unnamed patcher</h1>
+		</div>
+        <div id="rnbo-inports">
+            <h2>Inports</h2>
+            <em id="no-inports-label">No inports available</em>
+            <form id="inport-form" className="inport">
+                <div className="inport-input">
+                    <select id="inport-select"></select>
+                    <input id="inport-text" type="text"></input>
+                    <input id="inport-submit" className="smallButton" type="submit" value="Send"/>
+                </div>
+            </form>
+        </div>
+		<div id="rnbo-console">
+			<h2>Outports</h2>
+			<em id="no-outports-label">No outports available</em>
+			<div id="rnbo-console-div">
+				<p id="rnbo-console-readout">Waiting for messages...</p>
+				<em id="rnbo-console-description">Check the developer console for more messages from the RNBO device</em>
+			</div>
+		</div>
+		<div id="rnbo-presets">
+			<h2>Presets</h2>
+			<em id="no-presets-label"></em>
+			<select id="preset-select"></select>
+		</div>
+        <div id="rnbo-parameter-sliders">
+            <h2>Parameters</h2>
+            <em id="no-param-label"></em>
+        </div>
+        <div style="padding-bottom: 10px;"></div>
+        <div id="page-title">
+            orbits v1.1
+        </div>
+        <!-- Wrap the image with an anchor tag -->
+        <a href="https://www.iimaginary.com/">
+            <img class="logo" src="img/iimaginarylogosmall.png" alt="logo">
+        </a>
+<div class="left-side">
+    <div class="row" id="globalcontrols">
+        <div id="switchall1" class="button"></div>
+        <div id="random" class="dial"></div>
+        <div id="tempo" class="dial"></div>
+        <div id="openModalBtn"></div>
+    </div>
+</div><div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-inner-content"> <!-- Add this -->
+        <span class="close">&times;</span>
+        <h1>orbits</h1>
+        <p>/////////////////////////////////////////</p>
+        <p>Orbits is a stochastic drum machine that runs in the browser. It will always be free to use. It is designed to be user friendly for beginners and inspiring for experienced musicians.</p>
+        <p>To get started, generate a unique rhythm by clicking the 'random' button at the top of the page.</p>
+        <p>/////////////////////////////////////////</p>
+        <h2>controls</h2>
+        <p>density: Change the number of hits in the pattern</p>
+        <p>hide: Change the length of the pattern</p>
+        <p>random: Generate a unique pattern at the push of a button</p>
+        <p>length: Change the length of a drum hit</p>
+        <p>tune: Change the tuning of a drum hit</p>
+        <p>tempo: Change speed of playback</p>
+      </div> <!-- Add this -->
+    </div>
+  </div>
+  
+<div style="padding-bottom: 25px;"></div>
+<div class="label" style="left: 110px; top: 140px;">random</div>
+<div class="label" style="left: 173px; top: 140px;">density</div>
+<div class="label" style="left: 250px; top: 140px;">hide</div>
+<div class="label" style="left: 327px; top: 110px;">length</div>
+<div class="label" style="left: 400px; top: 110px;">tune</div>
+<div class="label" style="left: 455px; top: -5px;">pause/play</div>
+<div class="label" style="left: 567px; top: -5px;">random</div>
+<div class="label" style="left: 674px; top: -5px;">tempo</div>
+<div class="label" style="left: 782px; top: -5px;">help</div>
+<div class="label" div id="boldlabel" style="left: 52px; top: 165px;">kick/<br>clap</div>
+<div class="label" div id="boldlabel" style="left: 45px; top: 312px;">snare/<br>tom</div>
+<div class="label" div id="boldlabel" style="left: 52px; top: 459px;">rim/<br>clave</div>
+<div class="label" div id="boldlabel" style="left: 45px; top: 606px;">hat/<br>shaker</div>
+    <div style="padding-bottom: 150px;"></div>
+    <div class="row" id="boxcontainerab">
+        <div id="buttonab1" class="button"></div>
+        <div id="dialab1" class="dial"></div>
+        <div id="dialab2" class="dial"></div>
+        <div id="dialab3" class="dial"></div>
+        <div id="dialab4" class="dial"></div>
+        <div id="dialab5" class="dial"></div>
+        <div id="dialab6" class="dial"></div>
+        <div id="boxab1" class="box"></div>
+        <div id="boxab2" class="box"></div>
+        <div id="boxab3" class="box"></div>
+        <div id="boxab4" class="box"></div>
+        <div id="boxab5" class="box"></div>
+        <div id="boxab6" class="box"></div>
+        <div id="boxab7" class="box"></div>
+        <div id="boxab8" class="box"></div>
+        <div id="boxab9" class="box"></div>
+        <div id="boxab10" class="box"></div>
+        <div id="boxab11" class="box"></div>
+        <div id="boxab12" class="box"></div>
+        <div id="boxab13" class="box"></div>
+        <div id="boxab14" class="box"></div>
+        <div id="boxab15" class="box"></div>
+        <div id="boxab16" class="box"></div>
+    </div>
+    <div style="padding-bottom: 60px;"></div>
+    <div class="row" id="boxcontainercd">
+        <div id="buttoncd1" class="button"></div>
+        <div id="dialcd1" class="dial"></div>
+        <div id="dialcd2" class="dial"></div>
+        <div id="dialcd3" class="dial"></div>
+        <div id="dialcd4" class="dial"></div>
+        <div id="dialcd5" class="dial"></div>
+        <div id="dialcd6" class="dial"></div>
+        <div id="boxcd1" class="box"></div>
+        <div id="boxcd2" class="box"></div>
+        <div id="boxcd3" class="box"></div>
+        <div id="boxcd4" class="box"></div>
+        <div id="boxcd5" class="box"></div>
+        <div id="boxcd6" class="box"></div>
+        <div id="boxcd7" class="box"></div>
+        <div id="boxcd8" class="box"></div>
+        <div id="boxcd9" class="box"></div>
+        <div id="boxcd10" class="box"></div>
+        <div id="boxcd11" class="box"></div>
+        <div id="boxcd12" class="box"></div>
+        <div id="boxcd13" class="box"></div>
+        <div id="boxcd14" class="box"></div>
+        <div id="boxcd15" class="box"></div>
+        <div id="boxcd16" class="box"></div>
+    </div>
+    <div style="padding-bottom: 60px;"></div>
+    <div class="row" id="boxcontaineref">
+        <div id="buttonef1" class="button"></div>
+        <div id="dialef1" class="dial"></div>
+        <div id="dialef2" class="dial"></div>
+        <div id="dialef3" class="dial"></div>
+        <div id="dialef4" class="dial"></div>
+        <div id="dialef5" class="dial"></div>
+        <div id="dialef6" class="dial"></div>
+        <div id="boxef1" class="box"></div>
+        <div id="boxef2" class="box"></div>
+        <div id="boxef3" class="box"></div>
+        <div id="boxef4" class="box"></div>
+        <div id="boxef5" class="box"></div>
+        <div id="boxef6" class="box"></div>
+        <div id="boxef7" class="box"></div>
+        <div id="boxef8" class="box"></div>
+        <div id="boxef9" class="box"></div>
+        <div id="boxef10" class="box"></div>
+        <div id="boxef11" class="box"></div>
+        <div id="boxef12" class="box"></div>
+        <div id="boxef13" class="box"></div>
+        <div id="boxef14" class="box"></div>
+        <div id="boxef15" class="box"></div>
+        <div id="boxef16" class="box"></div>
+    </div>
+    <div style="padding-bottom: 60px;"></div>
+    <div class="row" id="boxcontainergh">
+        <div id="buttongh1" class="button"></div>
+        <div id="dialgh1" class="dial"></div>
+        <div id="dialgh2" class="dial"></div>
+        <div id="dialgh3" class="dial"></div>
+        <div id="dialgh4" class="dial"></div>
+        <div id="dialgh5" class="dial"></div>
+        <div id="dialgh6" class="dial"></div>
+        <div id="boxgh1" class="box"></div>
+        <div id="boxgh2" class="box"></div>
+        <div id="boxgh3" class="box"></div>
+        <div id="boxgh4" class="box"></div>
+        <div id="boxgh5" class="box"></div>
+        <div id="boxgh6" class="box"></div>
+        <div id="boxgh7" class="box"></div>
+        <div id="boxgh8" class="box"></div>
+        <div id="boxgh9" class="box"></div>
+        <div id="boxgh10" class="box"></div>
+        <div id="boxgh11" class="box"></div>
+        <div id="boxgh12" class="box"></div>
+        <div id="boxgh13" class="box"></div>
+        <div id="boxgh14" class="box"></div>
+        <div id="boxgh15" class="box"></div>
+        <div id="boxgh16" class="box"></div>
+    </div>
+    </div>
+</div>
+
+
+    <!-- Load the script that creates the RNBO device  -->
+    <!-- Uncomment if you know the version of your exported RNBO patch to avoid dynamic loading -->
+    <!-- <script type="text/javascript" src="https://cdn.cycling74.com/rnbo/latest/rnbo.min.js"></script> -->
+
+    <!-- (Optional) The guardrails.js script isn't required for RNBO to work, and you can skip including it -->
+    <!-- It simply offers some helpful error messages for common problems -->
+    <script type="module" src="js/guardrails.js"></script>
+
+    <!-- Import RNBO Engine Wrapper -->
+    <!-- Make sure to include the RNBO engine version to the version of your exported code, found in rnbopackage.json -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
