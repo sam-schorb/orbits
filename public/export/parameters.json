@@ -1,0 +1,239 @@
+[
+  {
+    "id": "densityAB",
+    "name": "densityAB",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+  
+  {
+    "id": "densityEF",
+    "name": "densityEF",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+  
+  {
+    "id": "random",
+    "name": "random",
+    "control": "button"
+  },
+
+  {
+    "id": "randomAB",
+    "name": "randomAB",
+    "control": "button"
+  },
+
+  {
+    "id": "pause",
+    "name": "pause",
+    "control": "switch"
+  },
+
+  {
+    "id": "randomEF",
+    "name": "randomEF",
+    "control": "button"
+  },
+
+  {
+    "id": "tempo",
+    "name": "tempo",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "hideEF",
+    "name": "hideEF",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "hideAB",
+    "name": "hideAB",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "densityCD",
+    "name": "densityCD",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "densityGH",
+    "name": "densityGH",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "randomGH",
+    "name": "randomGH",
+    "control": "button"
+  },
+
+  {
+    "id": "randomCD",
+    "name": "randomCD",
+    "control": "button"
+  },
+
+  {
+    "id": "hideCD",
+    "name": "hideCD",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "hideGH",
+    "name": "hideGH",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#999999"
+  },
+
+  {
+    "id": "808Kick/kickDecay",
+    "name": "kickDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#80d4ff"
+  },
+
+  {
+    "id": "808Kick/kickFreq",
+    "name": "kickFreq",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#80d4ff"
+  },
+
+  {
+    "id": "808Clap/clapDecay",
+    "name": "clapDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "red"
+  },
+
+  {
+    "id": "808Clap/clapFilter",
+    "name": "clapFilter",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "red"
+  },
+
+  {
+    "id": "808Snare/snareDecay",
+    "name": "snareDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "green"
+  },
+
+  {
+    "id": "808Snare/snareTune",
+    "name": "snareTune",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "green"
+  },
+
+  {
+    "id": "808MidTom/midTomDecay",
+    "name": "midTomDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#ff99cc"
+  },
+
+  {
+    "id": "808MidTom/midTomFreq",
+    "name": "midTomFreq",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#ff99cc"
+  },
+
+  {
+    "id": "808Clave/claveDecay",
+    "name": "claveDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "yellow"
+  },
+
+  {
+    "id": "808Clave/claveFreq",
+    "name": "claveFreq",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "yellow"
+  },
+
+  {
+    "id": "808Rim/rimDecay",
+    "name": "rimDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "blue"
+  },
+
+  {
+    "id": "808Rim/rimFilter",
+    "name": "rimFilter",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "blue"
+  },
+
+  {
+    "id": "808Shaker/shakerDecay",
+    "name": "shakerDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#ff6600"
+  },
+
+  {
+    "id": "808Shaker/shakerFilter",
+    "name": "shakerFilter",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#ff6600"
+  },
+
+  {
+    "id": "808cHat/cHatDecay",
+    "name": "cHatDecay",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#9933ff"
+  },
+
+  {
+    "id": "808cHat/cHatTone",
+    "name": "cHatTone",
+    "control": "dial",
+    "accentColor": "#333333",
+    "fillColor": "#9933ff"
+  }
+
+
+  ]

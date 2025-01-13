@@ -1,0 +1,518 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+#rnbo-root {
+  height: 100vh;
+  width: 100vw;
+}
+#background {
+  position: absolute;
+  z-index: -1;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+h2,
+em {
+  width: 100%;
+}
+
+#rnbo-root {
+  margin: auto;
+  max-width: 1300px; /* Increase max-width here */
+  transform: translate(50px, 10px);
+}
+
+#rnbo-clickable-keyboard {
+  display: none;
+  flex-wrap: wrap;
+}
+
+#rnbo-clickable-keyboard > div {
+  margin: 2px;
+  border: solid black 1px;
+  min-height: 50px;
+  flex-grow: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#rnbo-clickable-keyboard > div.clicked {
+  background: #222222;
+  color: #d9d9d9;
+  display: none;
+}
+
+#rnbo-parameter-sliders {
+  display: flex;
+  flex-direction: column;
+}
+
+#rnbo-parameter-sliders > div {
+  display: flex;
+}
+
+#rnbo-parameter-sliders > div > input:first-of-type {
+  flex-grow: 1;
+}
+
+/* Hide patcher title */
+#patcher-title {
+  display: none;
+}
+
+/* Hide rnbo inports */
+#rnbo-inports {
+  display: none;
+}
+
+/* Hide rnbo console */
+#rnbo-console {
+  display: none;
+}
+
+/* Hide rnbo presets */
+#rnbo-presets {
+  display: none;
+}
+
+/* Hide Parameters title */
+#rnbo-parameter-sliders h2 {
+  display: none;
+}
+
+/* Hide 'no midi input' label */
+#no-midi-label {
+  display: none;
+}
+
+/* Style the container */
+#boxcontainerAB {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the container */
+#globalcontrols {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  margin-bottom: 5px;
+  display: flex; /* Added this line */
+  flex-wrap: nowrap; /* Added this line */
+}
+
+/* Style the individual boxes */
+.box {
+  /* width: 40px; */ /* Commented this line */
+  flex: 1 1 auto; /* Added this line */
+  min-width: 30px; /* Added this line */
+  height: 50px;
+  border: 5px solid #333333;
+  background-color: white;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+  bottom: -5px;
+  border-radius: 50%;
+}
+
+/* Add your existing CSS code here */
+
+/* Filled boxes */
+.box-filled-red {
+  background-color: red;
+}
+
+.box-filled-blue {
+  background-color: blue;
+}
+
+/* Box outline */
+.box-outline {
+  border: 50px solid;
+}
+
+.box-outline-red {
+  border-color: red;
+}
+
+.box-outline-blue {
+  border-color: blue;
+}
+
+/* Clock signal position highlighting */
+.box-highlighted {
+  transition: transform 0.2s;
+  transform: translateY(10px);
+}
+
+/* Add this */
+.box-row {
+  width: 100%;
+}
+
+.dial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #333333;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 15px; /* Add this line */
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  background-color: #999999;
+}
+
+.dial-container:hover {
+  border-color: #999999;
+}
+
+.dial-name {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dial-value {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 9px solid #333333;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 15px; /* Add this line */
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  background-color: #333333;
+  transform: translate(0px, -9px); /* Add this line */
+}
+
+.button-container:hover {
+  border-color: #999999;
+}
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 9px solid #333333;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-right: 15px; /* Add this line */
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  background-color: #999999;
+  transform: translate(0px, -9px); /* Add this line */
+}
+
+.switch-container:hover {
+  border-color: #999999;
+}
+
+/* Add the CSS Grid container */
+#main-container {
+  display: grid;
+  grid-template-columns: auto 900px;
+  grid-gap: 10px;
+  align-items: start;
+}
+
+/* Add this new class for the left side container */
+.left-side {
+  position: left;
+  display: left;
+}
+
+#buttonab1,
+#buttoncd1,
+#buttonef1,
+#buttongh1,
+#dialab1,
+#dialab2,
+#dialcd1,
+#dialcd2,
+#dialef1,
+#dialef2,
+#dialgh1,
+#dialgh2 {
+  margin-top: 0em;
+  position: relative;
+  left: 100px; /* Adjust this value to move the element horizontally */
+}
+
+#dialab3,
+#dialab4,
+#dialcd3,
+#dialcd4,
+#dialef3,
+#dialef4,
+#dialgh3,
+#dialgh4 {
+  margin-top: -2em;
+  position: relative;
+  left: 120px; /* Adjust this value to move the element horizontally */
+}
+
+#dialab5,
+#dialab6,
+#dialcd5,
+#dialcd6,
+#dialef5,
+#dialef6,
+#dialgh5,
+#dialgh6 {
+  margin-top: 2em;
+  position: relative;
+  left: -10px; /* Adjust this value to move the element horizontally */
+}
+
+#globalcontrols {
+  position: absolute;
+  transform: translate(454px, 30px); /* Add this line */
+}
+
+#buttonab1,
+#buttoncd1,
+#buttonef1,
+#buttongh1 {
+  position: relative;
+  left: 100px;
+}
+
+#random {
+  transform: translate(-10px, 0px); /* Add this line */
+}
+
+#tempo {
+  transform: translate(-10px, 0px); /* Add this line */
+}
+
+.label {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 12px; /* Set the font size */
+  color: #333333; /* Set the font color */
+  transform: translate(0px, 20px);
+  font-weight: bold;
+}
+
+#boldlabel {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 12px; /* Set the font size */
+  color: #333333; /* Set the font color */
+  transform: translate(0px, 30px);
+  text-align: right;
+  font-weight: bold;
+}
+
+.dial-value {
+  font-family: 'Courier New', monospace;
+  font-size: 12px; /* Set the font size */
+  color: #333333; /* Set the font color */
+  margin-top: 5px;
+  text-align: center;
+  transform: translate(-7px, -30px);
+}
+
+#page-title {
+  font-family: 'Courier New', monospace;
+  position: absolute;
+  color: black;
+  font-size: 29px; /* Set the desired font size */
+  text-align: left; /* Center the title */
+  display: inline-block;
+  padding: 10px; /* Adjust the padding as needed */
+  border: 2px solid #333; /* Set the border width and color */
+  border-radius: 4px; /* Add rounded corners to the box */
+  margin-bottom: 20px; /* Add some margin below the title container */
+  transform: translate(110px, 25px);
+}
+
+#switchall1,
+#openModalBtn,
+#random,
+#tempo {
+  margin-right: 37px; /* Add this line */
+}
+
+.logo {
+  width: 100px; /* Set the desired width */
+  /* height: 100px; Optionally, set the desired height */
+  position: absolute;
+  transform: translate(-30px, 8px);
+}
+
+.modal {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  display: none;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  background-color: #333333;
+  color: #d9d9d9;
+}
+
+.modal-content {
+  background-color: #333333;
+  width: 70%;
+  height: 480px;
+  min-width: 800px;
+  min-height: 300px;
+  margin: 15% auto;
+  border: 3px solid #888;
+  overflow-y: auto; /* Add this */
+  position: relative; /* Add this */
+}
+
+.modal-inner-content {
+  width: 80%; /* Add this */
+  margin-left: auto; /* Add this */
+  margin-right: auto; /* Add this */
+}
+
+a {
+  color: #ff0000;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute; /* Add this */
+  top: 10px; /* Add this */
+  right: 10px; /* Add this */
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-content > h1 {
+  font-size: 40px;
+  margin: 0px;
+  font-weight: 400;
+}
+
+#modal-content > h2 {
+  font-size: 30px;
+  margin: 0px;
+  font-weight: 400;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
